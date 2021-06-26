@@ -1,0 +1,52 @@
+E_NFA: 
+
+Initial States : 1 
+
+Final States : 2 
+
+Total States :1 2 3 
+
+Transitions : 
+
+1 ---@---> 2
+1 ---a---> 3
+2 ---a---> 1
+3 ---b---> 3
+3 ---a---> 2
+3 ---b---> 2
+
+
+
+E Closure Transions : 
+
+1-- @ --> 1 2 
+2-- @ --> 2 
+3-- @ --> 3 
+
+
+transition Symbols : a b @
+
+
+NFA Transitions : 
+1 --- a --> 3 1 2 
+1 --- b --> Null
+2 --- a --> 1 2 
+2 --- b --> Null
+3 --- a --> 2 
+3 --- b --> 3 2 
+
+
+		_____________
+		***  DFA  ***
+		`````````````
+STATES		 a		 b
+
+12  		312		Trap State
+312  		231		32
+32  		21		32
+
+*****************************************************
+
+Initial State of DFA: 12
+
+Final States of DFA: 12 312 32 
